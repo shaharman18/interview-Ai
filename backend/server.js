@@ -1,4 +1,7 @@
-require('dotenv').config()
+// MUST be first: force IPv4 before any network calls (fixes ENETUNREACH on Render)
+require('dns').setDefaultResultOrder('ipv4first');
+
+require('dotenv').config();
 const app = require('./src/app');
 const connectDB = require('./src/config/db');
 
