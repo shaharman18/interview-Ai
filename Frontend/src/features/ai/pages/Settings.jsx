@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../auth/hooks/useAuth';
-import { useInterview } from '../hook/useInterview';
+import { useInterview } from '../hooks/useInterview';
 
 const Settings = () => {
     const navigate = useNavigate();

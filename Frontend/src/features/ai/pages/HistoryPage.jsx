@@ -1,6 +1,6 @@
 import React, { useEffect, useCallback, useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useInterview } from '../hook/useInterview';
+import { useInterview } from '../hooks/useInterview';
 import { useAuth } from '../../auth/hooks/useAuth';
 
 const HistoryPage = () => {

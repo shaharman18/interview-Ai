@@ -1,14 +1,10 @@
-
 import { RouterProvider } from 'react-router-dom'
-import { router } from './app.routes.jsx'
+import { router } from './AppRoutes.jsx'
 import './App.css'
 import { AuthProvider } from './features/auth/Auth.context.jsx'
-import { InterviewProvider } from './features/ai/interview.context.jsx'
-
+import { InterviewProvider } from './features/ai/InterviewContext.jsx'
 
 function App() {
-
-
   return (
     <>
     <AuthProvider>
@@ -17,7 +13,6 @@ function App() {
       </InterviewProvider>
     </AuthProvider>
     </>
- 
   )
 }
 

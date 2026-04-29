@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { useInterview } from '../hook/useInterview';
+import { useInterview } from '../hooks/useInterview';
 import { useAuth } from '../../auth/hooks/useAuth';
 
 const InterviewPage = () => {
