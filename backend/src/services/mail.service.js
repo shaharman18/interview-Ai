@@ -11,7 +11,7 @@ const transporter = nodemailer.createTransport({
     secure: false, // Use STARTTLS
     auth: {
         user: (process.env.GMAIL_USER || '').trim(),
-        pass: (process.env.GMAIL_APP_PASSWORD || '').trim().replace(/\s/g, '') // remove any spaces
+        pass: (process.env.GMAIL_APP_PASSWORD || '').trim().replace(/\s/g, '') 
     }
 });
 

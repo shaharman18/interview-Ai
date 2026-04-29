@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const BlackList = require('src/models/blackList');
+const BlackList = require('../models/blackList');
 
 const authMiddleware = async (req, res, next) => {
     const token = req.cookies.token;
@@ -17,7 +17,8 @@ const authMiddleware = async (req, res, next) => {
         req.user = decoded;
         next();
     } catch (error) {
-        return res.status(401).json({ message: 'Invalid token' });
+        res.clearCookie('token');
+        return res.status(401).json({ message: 'Invalid or expired token' });
     }
 };
 
